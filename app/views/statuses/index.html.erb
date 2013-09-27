@@ -3,11 +3,14 @@
 </div>
 <%= link_to "Post a new Status", new_status_path, class: "btn btn-success" %>
 
+
+
+
 <% @statuses.each do |status| %>
 <div class="status">
 	
-	
 	<p><%= status.content %></p>
+	<p>Posted by <%= status.user.profile_name %></p>
 	<div class="meta">
 		<%= link_to time_ago_in_words(status.created_at) + " ago", status %>
 	
