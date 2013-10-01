@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   
+  
+  
+  
   validates :first_name, presence: true
   has_many :statuses
   
